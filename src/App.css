@@ -86,3 +86,83 @@ h1 {
   color: #ddd;
   font-weight: 500;
 }
+
+/* ==========================================
+   7. DESIGN DO FORMULÁRIO DE CADASTRO
+   ========================================== */
+.secao-cadastro {
+  max-width: 450px;
+  margin: 0 auto 60px auto; /* Centraliza na tela e empurra os cards pra baixo */
+}
+
+.formulario-cadastro {
+  background-color: #121214;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-cadastro h2 {
+  color: #d4af37; /* Mantém o dourado no topo do bloco */
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.campo-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left; /* Garante que as labels fiquem alinhadas à esquerda */
+}
+
+.campo-input label {
+  color: #666;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.campo-input input {
+  background-color: #050505;
+  border: 1px solid #252525;
+  border-radius: 6px;
+  padding: 14px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Quando você clica na caixa de texto, ela ganha um foco com o seu azul elétrico */
+.campo-input input:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.2);
+}
+
+/* O BOTÃO INTERATIVO BRABO */
+.botao-cadastrar {
+  background-color: #1e90ff; /* Azul elétrico para dar identidade visual */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.botao-cadastrar:hover {
+  background-color: #1c86ee;
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.4);
+  transform: scale(1.02); /* Dá um leve estalo de tamanho ao passar o mouse */
+}
