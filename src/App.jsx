@@ -11,23 +11,33 @@ function App() {
       .catch(error => console.log("Erro ao buscar da API: ", error))
   
   }, [])
-
   return (
     <div className="container">
-      <h1> Fênix Le Parfums</h1>
-      <p>O catálogo sombrio está nascendo...</p>
-      <div className="perfume-list">
-        {perfumes.map(perfume => (
-          <div key={perfume.id} className="perfume-card">
-            <h2>{perfume.nome}</h2>
-            <p><strong>Marca:</strong> {perfume.marca}</p>
-            <p><strong>Família:</strong> {perfume.familiaOlfativa}</p>
-            </div>
+      <header className="cabecalho">
+        <h1>Fênix Le Parfums</h1>
+        <p>O catálogo sombrio está nascendo...</p>
+      </header>
 
+      {/* A vitrine onde os cartões vão ficar */}
+      <main className="vitrine">
+        {perfumes.map(perfume => (
+          <div key={perfume.id} className="card-perfume">
+            <h2>{perfume.nome}</h2>
+            
+            <div className="info-perfume">
+              <span className="label">Marca</span>
+              <span className="valor">{perfume.marca}</span>
+            </div>
+            
+            <div className="info-perfume">
+              <span className="label">Família</span>
+              <span className="valor">{perfume.familiaOlfativa}</span>
+            </div>
+          </div>
         ))}
-      </div>
+      </main>
     </div>
-  )
+  )  
 }
 
 export default App
