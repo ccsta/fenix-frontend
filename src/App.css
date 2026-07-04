@@ -1,33 +1,88 @@
-body{
-    background-color: #0a0a0a;
-    color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+/* 1. RESET E FUNDO GERAL */
+body {
+  background-color: #050505; /* Preto ainda mais profundo */
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
+/* 2. CABEÇALHO */
 .container {
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
 h1 {
-   color: #d4af37;
-   font-size: 3.5rem;
-   letter-spacing: 3px;
-   margin-bottom: 10px;
-}
-h2 {
-    color: #1984e7;
-    font-size: 2rem;
-    margin-bottom: 20px;
+  color: #d4af37; /* Dourado da marca */
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+  margin-bottom: 5px;
 }
 
-p{
-    font-size: 1.2rem;
-    color: #888;
-    font-style: italic;
+.cabecalho p {
+  color: #666;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
+/* 3. A VITRINE (GRID MÁGICO) */
+.vitrine {
+  display: grid;
+  /* Isso aqui faz os cartões ficarem lado a lado e quebrarem a linha sozinhos se a tela diminuir */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* 4. O DESIGN DOS CARDS */
+.card-perfume {
+  background-color: #121214; /* Cinza super escuro */
+  border: 1px solid #222;
+  border-radius: 12px; /* Bordas arredondadas modernas */
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra base */
+  transition: all 0.3s ease; /* Animação suave para o hover */
+}
+
+/* 5. INTERATIVIDADE (O pulo do gato) */
+.card-perfume:hover {
+  transform: translateY(-8px); /* Levanta o card */
+  border-color: #1e90ff; /* Acende a borda de azul */
+  box-shadow: 0 15px 40px rgba(30, 144, 255, 0.15); /* Brilho azul em volta */
+}
+
+/* 6. TIPOGRAFIA DENTRO DO CARD */
+.card-perfume h2 {
+  color: #1e90ff; /* O seu azul vibrante */
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 15px;
+}
+
+.info-perfume {
+  display: flex;
+  justify-content: space-between; /* Empurra o nome pra esquerda e o valor pra direita */
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.label {
+  color: #777;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.valor {
+  color: #ddd;
+  font-weight: 500;
+}
