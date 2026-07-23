@@ -1,16 +1,46 @@
-# React + Vite
+# 🦅 Fênix Le Parfums - Catálogo Sombrio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Preview do Projeto](https://img.shields.io/badge/Status-Em_Desenvolvimento-success)
+![React](https://img.shields.io/badge/Frontend-React_|_Vite-61DAFB?logo=react&logoColor=black)
+![Spring Boot](https://img.shields.io/badge/Backend-Spring_Boot_|_Java-6DB33F?logo=spring&logoColor=white)
 
-Currently, two official plugins are available:
+> *"O catálogo sombrio está nascendo..."*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Um sistema **Full-Stack** desenvolvido para o gerenciamento de um catálogo premium de perfumaria, com uma estética visual noturna (dark mode), sofisticada e moderna.
 
-## React Compiler
+## 💻 Sobre o Projeto
+Este projeto foi construído do zero com o objetivo de integrar uma interface dinâmica e responsiva no frontend com uma API RESTful robusta no backend. A aplicação permite cadastrar novas fragrâncias e visualizá-las em uma vitrine interativa com persistência de dados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+### Frontend (Interface & UX)
+*   **React (via Vite):** Renderização rápida e componentização.
+*   **CSS3 Puro:** Estilização global focada em UI Design, CSS Grid, Flexbox e efeitos de *hover* flutuantes.
+*   **Design System:** Paleta de cores escuras (Dark Mode) com destaques em azul elétrico e dourado premium.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend (Regras de Negócio & API)
+*   **Java 17+ & Spring Boot:** Motor da API REST para lidar com as requisições HTTP (GET, POST).
+*   **Banco de Dados H2:** Configurado para **persistência física** (salvando os dados em arquivo local `.db`), garantindo que o catálogo não perca informações ao reiniciar o servidor.
+*   **Spring Data JPA:** Mapeamento objeto-relacional para comunicação com o banco.
+
+## 🚀 Funcionalidades
+- [x] Listagem dinâmica de perfumes em formato de Grid de Cards.
+- [x] Formulário de cadastro de novos produtos integrado à API.
+- [x] Atualização da vitrine em tempo real após um novo cadastro (sem refresh da página).
+- [x] Persistência definitiva de dados no disco (H2 File-based).
+
+## ⚙️ Como executar o projeto localmente
+
+Você precisará clonar dois repositórios (o Frontend e o Backend) e rodá-los simultaneamente.
+
+**1. Rodando o Backend (Spring Boot)**
+1. Clone o repositório do backend.
+2. Abra o projeto na sua IDE (Eclipse, IntelliJ ou VS Code).
+3. Aguarde o Maven baixar as dependências e execute o arquivo `DemoApplication.java`.
+4. A API estará rodando em `http://localhost:8080`.
+
+**2. Rodando o Frontend (React)**
+1. Clone este repositório do frontend.
+2. Abra o terminal na pasta do projeto e instale as dependências:
+   ```bash
+   npm install
