@@ -49,7 +49,20 @@ function App() {
     })
     .catch(error => console.error("Erro no processo de POST:", error))
   }
-
+// Função implacável para deletar um perfume
+  const handleDeletar = (id) => {
+    fetch(`http://localhost:8080/catalogo/${id}`, {
+      method: 'DELETE',
+    })
+    .then(response => {
+      if (response.ok) {
+        buscarPerfumes() // Sucesso! Atualiza a vitrine apagando o card
+      } else {
+        alert("B.O. ao deletar o perfume no backend!")
+      }
+    })
+    .catch(error => console.error("Erro no processo de DELETE:", error))
+  }
   return (
     <div className="container">
       <header className="cabecalho">
@@ -116,6 +129,14 @@ function App() {
               <span className="label">Família</span>
               <span className="valor">{perfume.familiaOlfativa}</span>
             </div>
+            <button 
+              onClick={() => handleDeletar(perfume.id)} 
+              className="botao-deletar"
+            >
+              Excluir
+            </button>
+            {/* 👆 ============================= 👆 */}
+
           </div>
         ))}
       </main>
